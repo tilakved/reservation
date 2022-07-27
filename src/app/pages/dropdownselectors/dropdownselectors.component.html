@@ -6,12 +6,13 @@
         <h5>{{dropdownLabel}}</h5>
       </div>
       <div class="selection">
-        <h5>{{dropdownSelection}}</h5>
+        <h5 *ngIf="_helper.dropdown_category == 'persons'">{{dropdownSelection}} persons</h5>
+        <h5 *ngIf="_helper.dropdown_category != 'persons'" >{{dropdownSelection}}</h5>
       </div>
     </div>
   </div>
 </div>
 <div class="small_blocks_container container">
-  <app-smallblocks></app-smallblocks>
+  <app-smallblocks (newItemEvent)="addItem($event)" ></app-smallblocks>
 </div>
 

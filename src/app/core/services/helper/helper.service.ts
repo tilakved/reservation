@@ -10,7 +10,7 @@ export class HelperService {
   dropdown_category: any = 'time';
   no_of_person_arr: any = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25];
   timings_arr: any = ["16.00", "16.30", "17.00", "17.30", "18.00", "18.30", "19.00", "19.30", "20.00", "20.30", "21.00", "21.30", "22.00", "22.30", "23.00", "23.30", "24.00", "24.30", "25.00", "25.30", "26.00", "26.30", "27.00", "27.30", "28.00"];
-  section_arr: any = ["First Floor", "Second Floor", "Third Floor"]
+  section_arr: any = ["Select section", "First Floor", "Second Floor", "Third Floor"]
   dateSelected: any = "Today";
   personSelected: any = '2';
   sectionSelected: any = "Select section";

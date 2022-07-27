@@ -16,8 +16,7 @@ export class DropdownselectorsComponent implements OnInit {
   ngOnInit(): void {
     if (this._helper.dropdown_category == 'persons') {
       this.dropdownLabel = 'No. person';
-      this.dropdownSelection = this._helper.personSelected + ' persons';
-
+      this.dropdownSelection = this._helper.personSelected;
     }
     if (this._helper.dropdown_category == 'date') {
       this.dropdownLabel = 'Date';
@@ -29,4 +28,8 @@ export class DropdownselectorsComponent implements OnInit {
     }
   }
 
+  addItem($event: any) {
+    // console.log($event)
+    this.dropdownSelection = $event
+  }
 }
