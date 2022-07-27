@@ -1,0 +1,11 @@
+<div class="bg dis-flx justify-space-between">
+  <div>
+    {{title}}
+  </div>
+  <div>
+    <button class="reserve" *ngIf="_helper.mainpopup == false" (click)="_helper.mainpopup = true">To reserve</button>
+    <div *ngIf="_helper.mainpopup == true" class="pos-rel">
+    <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

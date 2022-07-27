@@ -1,0 +1,26 @@
+.bg {
+  height: 100%;
+  background-color: #f7fafc;
+}
+
+.reserve {
+  position: absolute;
+  top: 90%;
+  right: 20px;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #000;
+  background-color: #fff;
+  cursor: pointer;
+  height: 44px;
+  padding: 0 20px;
+  box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.75);
+  transition: all 0.3s ease-in-out;
+  border-radius: 10px;
+  font-family: "Work Sans";
+}
+
+

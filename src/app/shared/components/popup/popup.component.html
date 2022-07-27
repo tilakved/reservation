@@ -1,0 +1,16 @@
+<div class="popup">
+  <div class="top-strip dis-flx">
+    <div class="bell">
+      <img src="assets/svgs/bell-46.svg" alt="bell" width="18" height="22">
+    </div>
+    <div class="cross dis-flx justify-space-between">
+      <h2>{{PopUpHeading}}</h2>
+      <div (click)="closePopup()">
+        <a><img src="assets/svgs/cross-remove-sign-svgrepo-com.svg" alt="close" height="9" width="9"></a>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <h5>{{content_description}}</h5>
+  </div>
+</div>

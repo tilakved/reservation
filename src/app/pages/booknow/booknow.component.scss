@@ -1,0 +1,459 @@
+.container {
+  height: auto;
+  width: 750px;
+  background-color: #726DCC;
+  padding: 10px 20px;
+  //margin: 50px;
+  //border-radius: 10px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.top {
+  align-items: center;
+  color: #FFFFFF;
+
+  .back {
+    height: 31px;
+    cursor: pointer;
+
+    svg {
+      border-radius: 50%;
+      fill: #FFFFFF;
+      background-color: #726dcc;
+      width: 31px;
+      height: 31px;
+    }
+
+    svg:hover {
+      border-radius: 50%;
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  .storeName {
+    width: 73%;
+    text-align: center;
+  }
+
+  .login_register {
+    width: 23%;
+    justify-content: space-between;
+    font-weight: 600;
+
+    .login, .register {
+      padding: 5px 10px;
+      border-radius: 10px;
+    }
+
+    .login:hover, .register:hover {
+      background-color: black;
+    }
+  }
+}
+
+.new-bg {
+  background-color: #F4F4F4;
+  border-radius: 10px;
+}
+
+.form {
+  background-color: #FFFFFF;
+  border-radius: 0;
+  padding: 30px 60px;
+  overflow-y: scroll;
+
+  .meal_info {
+    .meal_img {
+      width: 40%;
+
+      img {
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        object-fit: cover;
+        width: 100%;
+        height: 200px;
+      }
+
+      .short_desc {
+        padding: 8px;
+        color: #FFFFFF;
+        position: absolute;
+        bottom: 7%;
+        left: 3%;
+        line-height: 1;
+        background-color: #726dcc;
+        border-radius: 10px;
+
+        h5 {
+          line-height: 1.2;
+        }
+      }
+    }
+
+    .meal_content {
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      width: 60%;
+      padding: 40px 20px;
+      text-align: center;
+
+      .closing_time {
+        background-color: #726dcc;
+        border-radius: 10px;
+        width: fit-content;
+        padding: 8px;
+        margin: 20px auto 0 auto;
+        color: #FFFFFF;
+      }
+
+      .finalize_time {
+        width: 90%;
+        margin: 0 auto;
+
+        h3 {
+          line-height: 1.2;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  .section {
+    margin-top: 20px;
+    padding: 20px;
+  }
+
+  .details {
+    border: 1px solid #EBEBEB;
+    border-radius: 10px;
+
+    form {
+      .radio_buttons_prefix {
+        padding: 20px 0;
+
+        div {
+          padding-right: 30px;
+
+          input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+          }
+
+          label {
+            padding-left: 30px;
+          }
+
+          .checkmark:after {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 22px;
+            height: 22px;
+            border-radius: 8px;
+            background: blue;
+          }
+
+          /* Create a custom radio button */
+          .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 25px;
+            width: 25px;
+            background-color: #EBEBEB;
+            border-radius: 8px;
+            border: 1px solid #EBEBEB;
+          }
+
+          /* When the radio button is checked, add a blue background */
+          input:checked ~ .checkmark {
+            background-color: white;
+          }
+
+          /* Show the indicator (dot/circle) when checked */
+          input:checked ~ .checkmark:after {
+            display: block;
+          }
+
+          /* Style the indicator (dot/circle) */
+          .checkmark::after {
+            content: "";
+            position: absolute;
+            display: none;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 22px;
+            height: 22px;
+            border-radius: 8px;
+            background-color: #33BC87;
+          }
+        }
+      }
+
+      .names, .contact {
+        input {
+          background: #F7F7F7;
+          border: none;
+          outline: none;
+          padding: 10px 20px;
+          width: 48%;
+          border-radius: 10px;
+          margin: 5px;
+          font-family: "Work Sans";
+        }
+
+        input:focus {
+          background: #FFFFFF 0% 0% no-repeat padding-box;
+          box-shadow: 0px 1px 4px #00000029;
+        }
+      }
+
+      .note {
+        textarea {
+          width: 98%;
+          background: #F7F7F7;
+          border: none;
+          outline: none;
+          padding: 10px 20px;
+          border-radius: 10px;
+          margin: 5px;
+          font-family: "Work Sans";
+          resize: none;
+
+        }
+
+        textarea:focus {
+          background: #FFFFFF 0% 0% no-repeat padding-box;
+          box-shadow: 0px 1px 4px #00000029;
+        }
+      }
+    }
+
+    .tel {
+      display: flex;
+      width: 50%;
+
+      input {
+        width: 80% !important;
+      }
+
+      .selectedFlag {
+        width: fit-content;
+        img{
+          margin: 0 4px;
+        }
+      }
+
+      .flagSelection {
+        padding: 10px;
+        position: absolute;
+        top: 50px;
+        background: #ffffff;
+        border: 1px solid #e8e8e8;
+        border-radius: 10px;
+        width: 100%;
+
+
+        .flag_option {
+          padding: 5px;
+
+          img {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  .payment-method {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #E8E8E8;
+    border-radius: 10px;
+
+    .all_pay_methods {
+      margin-top: 10px;
+
+      .pay {
+        background-color: #FFFFFF;
+        padding: 6px 10px;
+        align-items: center;
+        margin: 5px;
+        border-radius: 10px;
+        border: 1px solid #E8E8E8;
+
+
+        img {
+          height: 20px;
+          width: auto;
+          padding: 0 10px;
+        }
+
+        h5 {
+          border-left: 1px solid #E8E8E8;
+          padding: 0 20px;
+        }
+      }
+
+      .active {
+        background-color: #F7F7F7;
+      }
+    }
+  }
+}
+
+.form::-webkit-scrollbar {
+  width: 5px;
+}
+
+.form::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 10px;
+}
+
+.giftcard {
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border: 1px solid #E8E8E8;
+  border-radius: 10px;
+
+  .gift_card_code_input {
+    margin-top: 20px;
+
+    input {
+      background: #F7F7F7;
+      border: none;
+      outline: none;
+      padding: 10px 20px;
+      width: -webkit-fill-available;
+      border-radius: 10px;
+      font-family: "Work Sans";
+      margin-right: 10px;
+    }
+
+    input:focus {
+      background: #FFFFFF 0% 0% no-repeat padding-box;
+      box-shadow: 0px 1px 4px #00000029;
+    }
+
+    button {
+      background-color: #726dcc;
+      color: #FFFFFF;
+      font-weight: 700;
+      border: none;
+      outline: none;
+      border-radius: 10px;
+      width: 30%;
+    }
+  }
+}
+
+.terms_condition {
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border: 1px solid #E8E8E8;
+  border-radius: 10px;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  label {
+    padding-left: 30px;
+  }
+
+  .checkmark:after {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 22px;
+    height: 22px;
+    border-radius: 8px;
+    background: blue;
+  }
+
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    //top: 0;
+    left: 3%;
+    height: 25px;
+    width: 25px;
+    background-color: #EBEBEB;
+    border-radius: 8px;
+    border: 1px solid #EBEBEB;
+  }
+
+  /* When the radio button is checked, add a blue background */
+  input:checked ~ .checkmark {
+    background-color: white;
+  }
+
+  /* Show the indicator (dot/circle) when checked */
+  input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  /* Style the indicator (dot/circle) */
+  .checkmark::after {
+    content: "";
+    position: absolute;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 22px;
+    height: 22px;
+    border-radius: 8px;
+    background-color: #33BC87;
+  }
+
+}
+
+.covid_check {
+  span {
+    top: 22%;
+  }
+}
+
+.all_house_cat {
+  margin-top: 20px;
+  border: 1px solid #E8E8E8;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border-radius: 10px;
+
+  .all_house_yes_or_no {
+    border: none;
+
+    span.checkmark {
+      left: 0;
+    }
+  }
+
+  .select_houses {
+    margin-top: 0;
+    border-top: 1px solid #E8E8E8;
+
+    select {
+      background: #FFFFFF 0% 0% no-repeat padding-box;
+      border: 1px solid #E8E8E8;
+      border-radius: 10px;
+      width: 30%;
+      padding: 10px 20px;
+
+      option {
+        padding: 5px 10px;
+        border-bottom: 1px solid #EBEBEB;
+      }
+    }
+  }
+}
+
+.booknow {
+  color: #FFFFFF;
+  border-radius: 10px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}

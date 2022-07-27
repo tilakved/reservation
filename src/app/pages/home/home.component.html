@@ -1,0 +1,58 @@
+<div class="container">
+  <app-top></app-top>
+  <div class="description">
+    <div class="storeImage">
+      <div>
+        <img src="../../../assets/imgs/47e5c788ffd576d0e1478a7e4d55d958@2x.png" alt="{{storeName}}">
+      </div>
+      <div class="annoucement">
+        <div class="annoucement-block dynamic-opacity-80"></div>
+        <div class="annoucement-text" (click)="openAnnouncementPopup()">
+          <h5>Annoucement</h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="dropdowns_list">
+      <div class="filter_dropdown dis-flx black-opacity-20 justify-space-between">
+        <div class="label">
+          <h5>No. Person</h5>
+        </div>
+        <div class="selection" (click)="OpenDropdownSelector('persons')">
+          <h5>{{_helper.personSelected}} persons</h5>
+          <img alt="select" class="" height="13" src="assets/svgs/down-arrow-svgrepo-com.svg" width="13">
+        </div>
+      </div>
+
+      <div class="filter_dropdown dis-flx black-opacity-20 justify-space-between">
+        <div class="label">
+          <h5>Date</h5>
+        </div>
+        <div class="selection" (click)="OpenDropdownSelector('date')">
+          <h5>{{_helper.dateSelected}}</h5>
+          <img alt="select" height="13" src="assets/svgs/down-arrow-svgrepo-com.svg" width="13">
+        </div>
+      </div>
+
+      <div *ngIf="openSectionSelectionBool == true">
+        <div class="filter_dropdown dis-flx black-opacity-20 justify-space-between">
+          <div class="label">
+            <h5>Section</h5>
+          </div>
+          <div class="selection" (click)="OpenDropdownSelector('section')">
+            <h5>{{_helper.sectionSelected}}</h5>
+            <img alt="select" height="13" src="assets/svgs/down-arrow-svgrepo-com.svg" width="13">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="small_blocks_container container clearfix">
+  <app-smallblocks></app-smallblocks>
+</div>
+<div *ngIf="_helper.announcePop == true" class="announce-pop">
+  <app-popup></app-popup>
+</div>
+
+

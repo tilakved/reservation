@@ -1,0 +1,59 @@
+.top {
+  padding-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .cross {
+    a {
+      padding: 11px;
+      vertical-align: middle;
+      border: 0px solid beige;
+      display: inline-block;
+      border-radius: 50%;
+      line-height: 0;
+      cursor: pointer;
+      fill: #FFFFFF;
+      svg{
+        width: 9px;
+        height: 9px;
+      }
+    }
+
+    a:hover {
+      background-color: #FFFFFF;
+      fill: #000000;
+    }
+  }
+
+  .store_name {
+    color: #FFFFFF;
+  }
+
+  .lang_selection {
+    border-radius: 10px;
+
+    .selected_opt {
+      padding: 6px 12px;
+      border-radius: 10px;
+
+      h4 {
+        padding-right: 7px;
+        color: #FFFFFF;
+      }
+    }
+
+    .lang_dropdown {
+      background-color: #FFFFFF;
+      position: absolute;
+      margin-top: 20px;
+      border-radius: 10px;
+      z-index: 3;
+
+      div > h4 {
+        padding: 10px 20px;
+        display: inline-block;
+      }
+    }
+  }
+}

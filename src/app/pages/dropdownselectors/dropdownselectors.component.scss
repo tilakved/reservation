@@ -1,0 +1,23 @@
+.dropdowns_list {
+  margin: 10px 0;
+
+  .filter_dropdown {
+    padding: 0 10px;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 10px;
+
+    .label {
+      opacity: 60%;
+      width: 30%;
+    }
+
+    .selection {
+      width: 70%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+  }
+}

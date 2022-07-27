@@ -1,0 +1,178 @@
+<div class="height_100vh">
+  <div class="container">
+    <div class="top dis-flx">
+      <div class="back" (click)="OpenMeal()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+          <path d="M0 0h24v24H0z" fill="none"/>
+        </svg>
+      </div>
+
+      <div class="storeName">
+        {{_helper.storeName}}
+      </div>
+
+      <div class="login_register dis-flx">
+        <div class="login black-opacity-20">
+          <div>Login</div>
+        </div>
+        <div class="register black-opacity-20">
+          <div>Register</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container form">
+    <div class="meal_info dis-flx new-bg">
+      <div class="meal_img pos-rel">
+        <img src="{{_helper.mealSelected.food_image}}">
+        <div class="short_desc"><h5>{{_helper.personSelected}} x <b>{{_helper.mealSelected.food_name}}</b></h5></div>
+      </div>
+      <div class="meal_content">
+        <div class="finalize_time"><h3>Reservering voor 2 personen, donderdag 15 juli om 20:30 uur.</h3></div>
+        <div class="closing_time">This booking have a fixed end time 23:30</div>
+      </div>
+    </div>
+
+    <div class="section new-bg dis-flx justify-space-between">
+      <div><b>{{_helper.personSelected}} x {{_helper.mealSelected.food_name}}</b></div>
+      <div><b>€{{total | dutchPrice}}</b></div>
+    </div>
+
+    <div class="section details">
+      <h3><b>Your details</b></h3>
+      <h4>Please enter your details</h4>
+
+      <form>
+        <!--        formGroup = details-->
+        <div class="radio_buttons_prefix dis-flx">
+          <div class="pos-rel">
+            <label for="Dhr.">
+              <input type="radio" id="Dhr." name="add_prefix" value="Dhr.">
+              <span class="checkmark"></span>
+              Dhr.</label>
+          </div>
+          <div class="pos-rel">
+            <label for="Mevr.">
+              <input type="radio" id="Mevr." name="add_prefix" value="Mevr.">
+              <span class="checkmark"></span>
+              Mevr.</label>
+          </div>
+          <div class="pos-rel">
+            <label for="Familie">
+              <input type="radio" id="Familie" name="add_prefix" value="Familie">
+              <span class="checkmark"></span>
+              Familie</label>
+          </div>
+          <div class="pos-rel">
+            <label for="Bedrijf">
+              <input type="radio" id="Bedrijf" name="add_prefix" value="Bedrijf">
+              <span class="checkmark"></span>
+              Bedrijf</label>
+          </div>
+        </div>
+        <div class="names">
+          <input type="text" placeholder="First Name">
+          <!--          formControlName="firstName"-->
+          <input type="text" placeholder="Last Name">
+        </div>
+        <div class="contact dis-flx">
+          <input type="text" placeholder="Email">
+          <div class="tel pos-rel">
+            <div class="selectedFlag dis-flx" (click)="open_flag_selector()">
+              <img src="{{flag}}" height="25" width='40'>
+              <img src="../../../assets/svgs/down-arrow-svgrepo-com.svg" height="13" width="13">
+            </div>
+            <div class="flagSelection" *ngIf="openFlag == true">
+              <div class="flag_option dis-flx justify-space-between" (click)="selected_flag('nl')">
+                <div class="dis-flx"><img src="assets/svgs/flags/flag-of-netherlands.svg" height="25" width='40'>Netherlands</div>+31</div>
+              <div class="flag_option dis-flx justify-space-between" (click)="selected_flag('germany')">
+                <div class="dis-flx"><img src="assets/svgs/flags/germanyc.svg" height="25" width='40'>Germany</div>+49</div>
+              <div class="flag_option dis-flx justify-space-between" (click)="selected_flag('china')">
+                <div class="dis-flx"><img src="assets/svgs/flags/china-2.svg" height="25" width='40'>China</div>+86</div>
+              <div class="flag_option dis-flx justify-space-between" (click)="selected_flag('uk')">
+                <div class="dis-flx"><img src="assets/svgs/flags/flag-of-the-united-kingdom-2.svg" height="25" width='40'>United Kingdom</div>+44</div>
+            </div>
+            <input type="text" placeholder="Tel">
+          </div>
+        </div>
+        <div class="note">
+          <textarea rows="7" placeholder="Restaurant notite"></textarea>
+        </div>
+      </form>
+    </div>
+
+    <div class="section payment-method">
+      <h3><b>Select payment method</b></h3>
+      <h4>Your payment will be shown in the next page</h4>
+      <div class="all_pay_methods dis-flx justify-space-evenly">
+        <div class="pay dis-flx" (click)="payWith('Ideal')">
+          <img src="assets/imgs/payment-icons/iDEAL-groot.gif">
+          <h5>Ideal</h5>
+        </div>
+        <div class="pay dis-flx" (click)="payWith('Aliplay')">
+          <img src="assets/imgs/payment-icons/alipay-large.png">
+          <h5>Alipay</h5>
+        </div>
+        <div class="pay dis-flx" (click)="payWith('master card')">
+          <img src="assets/imgs/payment-icons/MasterCard-logo-small.jpg">
+          <h5>Master Card</h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="section giftcard">
+      <h3><b>E-gift card</b></h3>
+      <div class="gift_card_code_input dis-flx">
+        <input type="text" placeholder="E-gift card code">
+        <button type="button">Apply Code</button>
+      </div>
+    </div>
+
+    <div class="section terms_condition pos-rel">
+      <label> Ik ga akkoord met de algemene voorwaarden en privacy voorwaarden
+        <input type="checkbox">
+        <span class="checkmark"></span>
+      </label>
+    </div>
+
+    <div class="section terms_condition covid_check pos-rel">
+      <label> U dient de COVID-19 checklist in te vullen en bij binnenkomst te laten zien aan onze medewerker: <a>Checklist</a>
+        <input type="checkbox">
+        <span class="checkmark"></span>
+      </label>
+    </div>
+
+    <div class="all_house_cat">
+      <div class="section terms_condition all_house_yes_or_no ">
+        <div class="dis-flx justify-space-between">
+          Komen alle gezelschappen uit een huishouden?
+          <div class="pos-rel">
+            <label for="Yes">
+              <input type="radio" id="Yes" name="house" value="true">
+              <span class="checkmark"></span>
+              Yes</label>
+          </div>
+          <div class="pos-rel">
+            <label for="No">
+              <input type="radio" id="No" name="house" value="false">
+              <span class="checkmark"></span>
+              No</label>
+          </div>
+        </div>
+      </div>
+      <div class="section select_houses dis-flx justify-space-between">
+        No. of households
+        <select id="houses" name="houses">
+          <option value="2">2</option>
+          <option value="4">4</option>
+          <option value="6">6</option>
+          <option value="8">8</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="container dis-flx justify-center booknow" (click)="bookNow()">
+    Book Now
+  </div>
+</div>

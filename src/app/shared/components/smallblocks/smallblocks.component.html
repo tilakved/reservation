@@ -1,0 +1,21 @@
+<div class="time_slot_selection">
+  <div class="heading">
+    <h4>Choose {{selection_heading}}</h4>
+  </div>
+
+  <div class="pos-rel">
+    <div class="timings dis-flx">
+      <div (click)="reserved(options)" *ngFor="let options of selection_arr"
+           class="dis-flx time_box tooltip"
+           [ngClass]="{'disabledTime': booked == true, 'active':booked != true, 'give-width-100': _helper.dropdown_category == 'section'}"
+           >
+        <h5>{{options}}</h5>
+        <span class="dis-none" [ngClass]="{'tooltiptext': booked == true } "><h5>Sorry selected slot is not available. Please try another time slot.</h5></span>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="_helper.dropdown_category == 'date'" class="calendar dis-flx justify-center">
+    <div (click)="go()">RETURN</div>
+  </div>
+
+</div>
