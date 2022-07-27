@@ -1,8 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {HelperService} from "../../../core/services/helper/helper.service";
 import {Router} from "@angular/router";
+import { Output, EventEmitter } from '@angular/core';
 
-// import * as moment from 'moment';
+
 
 @Component({
   selector: 'app-smallblocks',
